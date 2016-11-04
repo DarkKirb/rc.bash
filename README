@@ -1,0 +1,8 @@
+These are my bashrc files. It might not be useable for you, but for me, they work.
+
+INSTALLATION
+------------
+
+1. run ./install.sh
+2. add "bash $HOME/.bash" to the beginning of ~/.bash_profile
+3. add "source $HOME/.bash.conf" to the beginning of ~/.bashrc (Ideally replace bashrc with this line)
