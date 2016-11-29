@@ -22,7 +22,7 @@ for script in $HOME/.bash.d/scripts/*.sh ; do
         source envvar
     fi
 done
-env | sed "s/'/\\'/g" | sed "s/=/='/" | sed "s/$/'/"| awk '{print "export",$0;}' >> $HOME/.bash.conf
+env | sed "s/'/\\'/g" | sed "s/=/='/" | sed "s/$/'/"| sed "/_start/d" | awk '{print "export",$0;}' >> $HOME/.bash.conf
 chmod +x ~/.bash.conf
 success_msg "Successfully writen the config"
 rm envvar
